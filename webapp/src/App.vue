@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-jumbotron id='hello' text-variant="light" border-variant="dark">
-      <template #header>{{(scene==="hello")?'Pomodoro':(toTwo(time.min) + ':' + toTwo(time.sec))}}
+      <template #header>{{(scene==="hello")?'':(toTwo(time.min) + ':' + toTwo(time.sec))}}
 </template>
     <Hello v-show='scene==="hello"' @start='start'/>
     <Timer v-show='scene==="timer"' :state='state' @togglePause='togglePause' @change='change'/>
@@ -86,6 +86,7 @@ export default {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     background-color: #222;
+    max-width: 95%;
   }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
