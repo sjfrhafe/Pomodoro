@@ -42,8 +42,10 @@ export default {
       if(this.state.remaining > 1){
         this.state.remaining--
       }else if(this.state.phase==='work'){
+        document.getElementById('sound').play()
         this.state = {remaining: parseInt(this.times.pause), origin: parseInt(this.times.pause), phase: 'pause', playstate: true}
       }else{
+        document.getElementById('sound').play()
         this.state = {remaining: parseInt(this.times.work), origin: parseInt(this.times.work), phase: 'work', playstate: true}
       }
     },
@@ -61,7 +63,6 @@ export default {
       }
     },
     change(dif){
-      document.getElementById('sound').play()
       let nVal = this.state.remaining + (dif * 60)
       if(nVal < 0){
         this.state.remaining = 0
