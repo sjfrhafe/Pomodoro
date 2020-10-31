@@ -9,6 +9,10 @@
 
     <div id='background'></div>
 
+    <audio controls id='sound'>
+      <source src="./assets/Swoosh.mp3" type="audio/mpeg">
+    </audio>
+
   </div>
 </template>
 
@@ -28,6 +32,7 @@ export default {
   },
   methods: {
     start(times){
+      document.getElementById('sound').play()
       this.times = times
       this.scene = 'timer'
       this.state = {remaining: parseInt(times.work), origin: parseInt(times.work), phase: 'work', playstate: true}
@@ -56,6 +61,7 @@ export default {
       }
     },
     change(dif){
+      document.getElementById('sound').play()
       let nVal = this.state.remaining + (dif * 60)
       if(nVal < 0){
         this.state.remaining = 0
@@ -107,5 +113,9 @@ export default {
   background-size: cover;
   background-position: center;
   z-index: -100;
+}
+
+#sound{
+  display: none;
 }
 </style>
