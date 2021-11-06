@@ -14,3 +14,8 @@ npm run serve
 ```
 docker build -t pomodoro .
 ```
+
+### Run Dockerimage
+```
+docker run -p [yourport]:80 pomodoro
+```
