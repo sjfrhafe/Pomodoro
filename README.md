@@ -10,15 +10,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Build Dockerimage
 ```
-npm run build
+docker build -t pomodoro .
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
