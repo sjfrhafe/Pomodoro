@@ -3,18 +3,6 @@
     <b-jumbotron id='hello' text-variant="light" border-variant="dark">
       <template #header>{{(scene==="hello")?'':(toTwo(time.min) + ':' + toTwo(time.sec))}}
 </template>
-    <Hello v-show='scene==="hello"' @start='start'/>
-    <Timer v-show='scene==="timer"' :state='state' @togglePause='togglePause' @change='change'/>
-  </b-jumbotron>
-
-    <div id='background'></div>
-
-    <audio controls id='sound'>
-      <source src="./assets/Swoosh.mp3" type="audio/mpeg">
-    </audio>
-
-  </div>
-</template>
 
 <script>
 import Hello from './components/Hello.vue'

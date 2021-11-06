@@ -38,7 +38,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .input-group-prepend >div{
   width: 70px !important;
